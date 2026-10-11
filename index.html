@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/type-explorer.css" />
   </head>
   <body>
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -120,33 +121,62 @@
           <p>Identifica el suceso que produjo directamente la lesión. El anexo organiza los tipos en rangos de código para apoyar una lectura homogénea de los casos.</p>
         </div>
         <div class="tabs reveal">
-          <div class="tab-list" role="tablist" aria-label="Grupos de tipo de accidente">
+          <div class="tab-list" role="tablist" aria-label="Grupos de tipo de accidente" aria-orientation="horizontal">
             <button type="button" class="tab is-active" id="tab-impacto" role="tab" aria-selected="true" aria-controls="panel-impacto">Impacto y contacto</button>
             <button type="button" class="tab" id="tab-esfuerzo" role="tab" aria-selected="false" aria-controls="panel-esfuerzo" tabindex="-1">Sin impacto</button>
             <button type="button" class="tab" id="tab-transporte" role="tab" aria-selected="false" aria-controls="panel-transporte" tabindex="-1">Transporte</button>
           </div>
-          <div class="tab-panel" id="panel-impacto" role="tabpanel" aria-labelledby="tab-impacto">
+          <div class="tab-panel is-active" id="panel-impacto" role="tabpanel" aria-labelledby="tab-impacto" tabindex="0">
             <div class="code-visual"><span class="code-range">000–199</span><span class="impact-line" aria-hidden="true"></span><span class="impact-dot" aria-hidden="true"></span></div>
-            <div>
+            <div class="code-content">
               <h3>Impactos, caídas y atrapamientos</h3>
               <p>Incluye golpes contra objetos, golpes por objetos que caen o vuelan, caídas, atrapamientos y fricción. La dirección predominante del movimiento ayuda a distinguir “golpeado contra” de “golpeado por”.</p>
-              <ul class="code-list"><li><b>010</b> Golpeado contra</li><li><b>020</b> Golpeado por</li><li><b>030 / 050</b> Caídas</li><li><b>060</b> Cogido en, debajo o entre</li></ul>
+              <div class="code-explorer" aria-label="Códigos de impacto y contacto">
+                <div class="code-card-grid">
+                  <button class="code-card is-active" type="button" aria-pressed="true" data-code="010" data-title="Golpeado contra" data-subcodes="011 Objetos fijos · 012 Objetos en movimiento · 019 No especificado en otra parte" data-detail="El movimiento que produce el contacto es principalmente de la persona lesionada; incluye chocar, pisar o patear objetos."><span>010</span><strong>Golpeado contra</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="020" data-title="Golpeado por" data-subcodes="021 Objetos que caen · 022 Objetos que vuelan · 029 No especificado en otra parte" data-detail="El movimiento que produce el contacto es principalmente el del agente de la lesión, no el de la persona."><span>020</span><strong>Golpeado por</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="030" data-title="Caída de un nivel superior" data-subcodes="031 Andamios o plataformas · 032 Escaleras · 033 Materiales apilados · 034 Vehículos · 039 N.E.P." data-detail="Aplica cuando la gravedad produce la caída y el punto de contacto queda por debajo de la superficie que sustentaba a la persona."><span>030</span><strong>Caída a nivel inferior</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="050" data-title="Caída a un mismo nivel" data-subcodes="051 En pasillo o superficie de trabajo · 052 Sobre o contra objetos · 059 N.E.P." data-detail="Aplica cuando, tras perder el equilibrio, el punto de contacto queda al mismo nivel o sobre la superficie de apoyo."><span>050</span><strong>Caída al mismo nivel</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="060" data-title="Cogido en, debajo o entre" data-subcodes="061 Engranajes o rodillos · 062 Objeto móvil y fijo · 063 Dos o más objetos móviles · 064 Materiales aplastantes · 069 N.E.P." data-detail="Registra lesiones sin impacto por compresión, pellizco o trituración entre objetos o partes en movimiento."><span>060</span><strong>Cogido en, debajo o entre</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="080" data-title="Fricción o raspadura" data-subcodes="081 Por rozarse · 082 Objetos operados manualmente · 083 Objetos vibrantes · 084 Materias extrañas en ojos · 085 Presión repetida · 089 N.E.P." data-detail="Corresponde a lesión sin impacto por presión, vibración o fricción entre la persona y el agente de la lesión."><span>080</span><strong>Fricción o raspadura</strong></button>
+                </div>
+                <div class="code-detail" aria-live="polite"><p class="code-detail-label"><b>010</b> Golpeado contra</p><p>El movimiento que produce el contacto es principalmente de la persona lesionada; incluye chocar, pisar o patear objetos.</p><small>011 Objetos fijos · 012 Objetos en movimiento · 019 No especificado en otra parte</small></div>
+              </div>
             </div>
           </div>
-          <div class="tab-panel" id="panel-esfuerzo" role="tabpanel" aria-labelledby="tab-esfuerzo" hidden>
+          <div class="tab-panel" id="panel-esfuerzo" role="tabpanel" aria-labelledby="tab-esfuerzo" tabindex="0" hidden>
             <div class="code-visual warm"><span class="code-range">100–180</span><span class="effort-wave" aria-hidden="true">∿</span></div>
-            <div>
+            <div class="code-content">
               <h3>Reacción corporal y exposiciones</h3>
               <p>Reúne eventos sin impacto: movimiento libre del cuerpo, sobreesfuerzo, contacto eléctrico, temperaturas extremas y sustancias nocivas o radiaciones.</p>
-              <ul class="code-list"><li><b>100</b> Reacción corporal</li><li><b>120</b> Sobreesfuerzo</li><li><b>130</b> Corriente eléctrica</li><li><b>150 / 180</b> Temperaturas o sustancias nocivas</li></ul>
+              <div class="code-explorer" aria-label="Códigos de accidentes sin impacto">
+                <div class="code-card-grid">
+                  <button class="code-card is-active" type="button" aria-pressed="true" data-code="100" data-title="Reacción corporal" data-subcodes="101 Movimientos involuntarios · 102 Movimientos voluntarios" data-detail="Registra lesión resultante de un movimiento libre del cuerpo que impone sobrecarga o tensión sobre alguna de sus partes."><span>100</span><strong>Reacción corporal</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="120" data-title="Sobreesfuerzo" data-subcodes="121 Al levantar · 122 Al halar o empujar · 123 Al manipular o lanzar · 129 N.E.P." data-detail="Aplica cuando la lesión se produce por esfuerzo físico excesivo al levantar, halar, empujar, esgrimir o lanzar el agente de la lesión."><span>120</span><strong>Sobreesfuerzo</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="130" data-title="Contacto con corriente eléctrica" data-subcodes="Choque eléctrico · Electrocución · Quemadura" data-detail="Corresponde únicamente a casos sin impacto en los que la lesión es choque eléctrico, electrocución o quemadura."><span>130</span><strong>Corriente eléctrica</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="150" data-title="Contacto con temperaturas extremas" data-subcodes="151 Altas temperaturas · 152 Bajas temperaturas · 153 Objetos calientes · 154 Objetos fríos" data-detail="Incluye quemadura, agotamiento por calor, congelación o lesión cutánea por exposición a objetos, aire, gases, vapores o líquidos calientes o fríos."><span>150</span><strong>Temperaturas extremas</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="180" data-title="Radiaciones o sustancias nocivas" data-subcodes="181 Inhalación · 182 Ingestión · 183 Absorción · 189 N.E.P." data-detail="Registra lesiones por inhalación, absorción, ingestión de sustancias nocivas o exposición a radiaciones."><span>180</span><strong>Radiaciones o sustancias</strong></button>
+                </div>
+                <div class="code-detail" aria-live="polite"><p class="code-detail-label"><b>100</b> Reacción corporal</p><p>Registra lesión resultante de un movimiento libre del cuerpo que impone sobrecarga o tensión sobre alguna de sus partes.</p><small>101 Movimientos involuntarios · 102 Movimientos voluntarios</small></div>
+              </div>
             </div>
           </div>
-          <div class="tab-panel" id="panel-transporte" role="tabpanel" aria-labelledby="tab-transporte" hidden>
+          <div class="tab-panel" id="panel-transporte" role="tabpanel" aria-labelledby="tab-transporte" tabindex="0" hidden>
             <div class="code-visual blue"><span class="code-range">200–399</span><span class="vehicle" aria-hidden="true">▰</span></div>
-            <div>
+            <div class="code-content">
               <h3>Accidentes de transporte</h3>
               <p>El anexo separa el transporte público de los vehículos motorizados. Para estos últimos, clasifica el primer suceso de la secuencia que afectó al ocupante.</p>
-              <ul class="code-list"><li><b>200</b> Transporte público</li><li><b>300</b> Vehículos motorizados</li><li><b>310 / 320</b> Choques</li><li><b>330</b> Accidentes sin choque</li></ul>
+              <div class="code-explorer" aria-label="Códigos de accidentes de transporte">
+                <div class="code-card-grid">
+                  <button class="code-card is-active" type="button" aria-pressed="true" data-code="200" data-title="Accidentes de transporte público" data-subcodes="201 Aviación · 203 Buses · 205 Barcos o botes · 207 Tranvías o trenes subterráneos · 209 Taxis · 211 Trenes · 293 N.E.P." data-detail="Se usa cuando la lesión proviene de un accidente o del movimiento de un vehículo público y la persona lesionada viajaba como pasajera."><span>200</span><strong>Transporte público</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="300" data-title="Accidentes de vehículos motorizados" data-subcodes="Clasifique el primer suceso de la secuencia" data-detail="Corresponde cuando la persona lesionada ocupaba un vehículo distinto al de transporte público y la lesión resultó del accidente o movimiento del vehículo."><span>300</span><strong>Vehículos motorizados</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="310" data-title="Choque o roce lateral entre vehículos en movimiento" data-subcodes="311 Dirección contraria · 312 Misma dirección · 313 En intersección" data-detail="Distingue el choque o roce lateral con otro vehículo que también se encontraba en movimiento."><span>310</span><strong>Choque entre vehículos</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="320" data-title="Choque con vehículo parado u objeto fijo" data-subcodes="321 En vía · 322 A un lado de la vía · 323 Golpeado estando parado en vía · 324 Fuera de vía · 329 Otros" data-detail="Registra colisiones o roces con vehículos parados u objetos fijos y otras formas de choque especificadas."><span>320</span><strong>Choque con objeto fijo</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="330" data-title="Accidentes sin choque" data-subcodes="331 Volcarse · 332 Salirse de la vía · 333 Parada o arranque intempestivo · 338 Otros" data-detail="Agrupa sucesos de vehículos motorizados sin choque, como volcamientos, pérdida de control o movimientos intempestivos."><span>330</span><strong>Accidente sin choque</strong></button>
+                  <button class="code-card" type="button" aria-pressed="false" data-code="899" data-title="Tipo de accidente no especificado" data-subcodes="999 No clasificado: datos insuficientes" data-detail="Use 899 cuando el tipo de accidente no esté especificado en otra parte; 999 indica que no hay datos suficientes para clasificar."><span>899</span><strong>No especificado</strong></button>
+                </div>
+                <div class="code-detail" aria-live="polite"><p class="code-detail-label"><b>200</b> Accidentes de transporte público</p><p>Se usa cuando la lesión proviene de un accidente o del movimiento de un vehículo público y la persona lesionada viajaba como pasajera.</p><small>201 Aviación · 203 Buses · 205 Barcos o botes · 207 Tranvías o trenes subterráneos · 209 Taxis · 211 Trenes · 293 N.E.P.</small></div>
+              </div>
             </div>
           </div>
         </div>

@@ -46,25 +46,84 @@ chainSteps.forEach((step) => {
   });
 });
 
-const tabs = document.querySelectorAll('[role="tab"]');
-tabs.forEach((tab) => {
-  tab.addEventListener('click', () => {
-    tabs.forEach((item) => {
-      const selected = item === tab;
-      item.classList.toggle('is-active', selected);
-      item.setAttribute('aria-selected', selected);
-      item.tabIndex = selected ? 0 : -1;
-      document.getElementById(item.getAttribute('aria-controls')).hidden = !selected;
-    });
+const tabList = document.querySelector('.tab-list[role="tablist"]');
+const tabs = tabList ? [...tabList.querySelectorAll('[role="tab"]')] : [];
+
+const activateTab = (tab, { focus = false } = {}) => {
+  if (!tab || !tabs.includes(tab)) return;
+
+  tabs.forEach((item) => {
+    const selected = item === tab;
+    const panel = document.getElementById(item.getAttribute('aria-controls'));
+    item.classList.toggle('is-active', selected);
+    item.setAttribute('aria-selected', String(selected));
+    item.tabIndex = selected ? 0 : -1;
+    if (panel) {
+      panel.hidden = !selected;
+      panel.classList.toggle('is-active', selected);
+    }
   });
 
-  tab.addEventListener('keydown', (event) => {
-    const current = [...tabs].indexOf(tab);
-    if (!['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+  if (focus) tab.focus();
+};
+
+if (tabList) {
+  tabList.addEventListener('click', (event) => {
+    const tab = event.target.closest('[role="tab"]');
+    if (!tab || !tabList.contains(tab)) return;
+    activateTab(tab);
+  });
+
+  tabList.addEventListener('keydown', (event) => {
+    const currentTab = event.target.closest('[role="tab"]');
+    if (!currentTab || !tabs.includes(currentTab)) return;
+
+    const current = tabs.indexOf(currentTab);
+    const keyToIndex = {
+      ArrowRight: (current + 1) % tabs.length,
+      ArrowLeft: (current - 1 + tabs.length) % tabs.length,
+      Home: 0,
+      End: tabs.length - 1
+    };
+
+    if (!(event.key in keyToIndex)) return;
     event.preventDefault();
-    const next = event.key === 'ArrowRight' ? (current + 1) % tabs.length : (current - 1 + tabs.length) % tabs.length;
-    tabs[next].focus();
-    tabs[next].click();
+    activateTab(tabs[keyToIndex[event.key]], { focus: true });
+  });
+}
+
+const setCodeDetail = (explorer, card) => {
+  const detail = explorer.querySelector('.code-detail');
+  if (!detail || !card) return;
+
+  explorer.querySelectorAll('.code-card').forEach((item) => {
+    const selected = item === card;
+    item.classList.toggle('is-active', selected);
+    item.setAttribute('aria-pressed', String(selected));
+  });
+
+  const label = document.createElement('p');
+  label.className = 'code-detail-label';
+  const code = document.createElement('b');
+  code.textContent = card.dataset.code;
+  label.append(code, ` ${card.dataset.title}`);
+
+  const description = document.createElement('p');
+  description.textContent = card.dataset.detail;
+
+  const subcodes = document.createElement('small');
+  subcodes.textContent = card.dataset.subcodes;
+
+  detail.replaceChildren(label, description, subcodes);
+  detail.classList.remove('is-updated');
+  requestAnimationFrame(() => detail.classList.add('is-updated'));
+};
+
+document.querySelectorAll('.code-explorer').forEach((explorer) => {
+  explorer.addEventListener('click', (event) => {
+    const card = event.target.closest('.code-card');
+    if (!card || !explorer.contains(card)) return;
+    setCodeDetail(explorer, card);
   });
 });
 
