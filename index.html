@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Presentación interactiva sobre el análisis de causas conforme a la interpretación académica de ANSI Z16.2." />
+    <title>Tema 6 | ANSI Z16.2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <div class="reading-progress" aria-hidden="true"><span id="readingProgress"></span></div>
+
+    <header class="site-header" id="inicio">
+      <a class="brand" href="#inicio" aria-label="Volver al inicio">
+        <span class="brand-mark">Z</span>
+        <span>ANSI <b>Z16.2</b></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+        <span class="sr-only">Abrir menú</span><span></span><span></span>
+      </button>
+      <nav id="primaryNav" class="primary-nav" aria-label="Secciones principales">
+        <a href="#metodo">Método</a>
+        <a href="#tipo">Tipo</a>
+        <a href="#condicion">Condición</a>
+        <a href="#agente">Agente</a>
+        <a href="#acto">Acto</a>
+        <a href="#practica">Práctica</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero section-anchor" aria-labelledby="heroTitle">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span> Tema 6 · Norma ANSI, 1995</p>
+            <h1 id="heroTitle">Interpretación del método normativo americano para registrar los hechos básicos relacionados con la naturaleza y ocurrencia de las lesiones del trabajo</h1>
+            <p class="hero-intro">Una guía interactiva para analizar, clasificar y registrar hechos de accidente con criterios consistentes.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#metodo">Comenzar a explorar <span aria-hidden="true">↓</span></a>
+              <button class="button button-quiet" type="button" data-open-modal="glossaryModal">Abrir glosario</button>
+            </div>
+            <div class="contributors" aria-label="Integrantes de la presentación">
+              <p>Integrantes</p>
+              <ul>
+                <li>MARIA JOSE CORONADO TORRES</li>
+                <li>LAURA NATHALY MONTENEGRO GAVIRIA</li>
+                <li>ALEXANDRA PALMA ACOSTA</li>
+              </ul>
+            </div>
+          </div>
+          <div class="hero-visual" aria-label="Diagrama de la secuencia de clasificación">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="hero-badge">Registro<br /><b>con criterio</b></div>
+            <ol class="classification-wheel">
+              <li><span>01</span> Suceso</li>
+              <li><span>02</span> Condición</li>
+              <li><span>03</span> Agente</li>
+              <li><span>04</span> Acción</li>
+            </ol>
+            <p class="visual-caption">Cada categoría responde una pregunta distinta.</p>
+          </div>
+        </div>
+        <div class="hero-footer"><span>SECCIÓN 3</span><span aria-hidden="true"></span><p>Categorías analíticas, definiciones y reglas para su selección</p></div>
+      </section>
+
+      <section id="metodo" class="section method section-anchor" aria-labelledby="methodTitle">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> Lectura orientada</p>
+          <h2 id="methodTitle">Un registro útil parte de <em>hechos</em>, no de culpables</h2>
+          <p>La interpretación propone registrar un dato pertinente en cada categoría. El propósito es encontrar tendencias para prevenir accidentes, sin convertir la clasificación en una asignación de responsabilidad.</p>
+        </div>
+        <div class="principles-grid">
+          <article class="principle reveal">
+            <span class="principle-number">01</span>
+            <h3>Separar lo que ocurrió</h3>
+            <p>El tipo de accidente describe el suceso que produjo directamente la lesión. No explica por sí solo la condición ni la acción personal.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="principle-number">02</span>
+            <h3>Conservar las relaciones</h3>
+            <p>Las categorías se enlazan para que las tabulaciones cruzadas mantengan significado analítico.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="principle-number">03</span>
+            <h3>Evitar interpretaciones subjetivas</h3>
+            <p>La selección se hace con reglas de observación. La causa física puede coexistir con un acto inseguro.</p>
+          </article>
+        </div>
+        <aside class="note-card reveal"><span class="note-icon" aria-hidden="true">i</span><p><b>Alcance académico.</b> El PDF fuente se presenta como una interpretación de HSEIntegra con fines académicos y de orientación, no como la norma ANSI original. Esta página conserva esa condición.</p><small>PDF, pp. 1–3</small></aside>
+      </section>
+
+      <section class="chain-section" aria-labelledby="chainTitle">
+        <div class="chain-intro reveal">
+          <p class="eyebrow"><span></span> Mapa de decisión</p>
+          <h2 id="chainTitle">La ruta para clasificar un caso</h2>
+          <p>Sigue la secuencia al documentar el accidente. Pulsa cada etapa para ver la pregunta que resuelve.</p>
+        </div>
+        <div class="classification-chain reveal" role="list">
+          <button class="chain-step is-selected" type="button" data-chain="type" role="listitem"><span>3.4</span><strong>Tipo de accidente</strong><small>¿Qué suceso produjo la lesión?</small></button>
+          <button class="chain-step" type="button" data-chain="condition" role="listitem"><span>3.5</span><strong>Condición peligrosa</strong><small>¿Qué factor físico la permitió?</small></button>
+          <button class="chain-step" type="button" data-chain="agent" role="listitem"><span>3.6</span><strong>Agente del accidente</strong><small>¿En qué objeto o estructura estaba?</small></button>
+          <button class="chain-step" type="button" data-chain="part" role="listitem"><span>3.7</span><strong>Parte del agente</strong><small>¿Qué parte identificable contenía el peligro?</small></button>
+          <button class="chain-step" type="button" data-chain="act" role="listitem"><span>3.8</span><strong>Acto inseguro</strong><small>¿Qué acción u omisión incidió directamente?</small></button>
+        </div>
+        <div class="chain-detail" aria-live="polite">
+          <p class="chain-kicker">3.4 · TIPO DE ACCIDENTE</p>
+          <h3>El suceso productor</h3>
+          <p>Selecciona la forma que mejor describe cómo ocurrió el contacto, o la acción o movimiento que originó la lesión cuando el agente de la lesión fue un movimiento corporal.</p>
+          <small>Base: PDF, p. 6</small>
+        </div>
+      </section>
+
+      <section id="tipo" class="section accident-type section-anchor" aria-labelledby="typeTitle">
+        <div class="section-heading narrow reveal">
+          <p class="eyebrow"><span></span> 3.4 · Anexo A1.4</p>
+          <h2 id="typeTitle">Tipo de accidente</h2>
+          <p>Identifica el suceso que produjo directamente la lesión. El anexo organiza los tipos en rangos de código para apoyar una lectura homogénea de los casos.</p>
+        </div>
+        <div class="tabs reveal">
+          <div class="tab-list" role="tablist" aria-label="Grupos de tipo de accidente">
+            <button type="button" class="tab is-active" id="tab-impacto" role="tab" aria-selected="true" aria-controls="panel-impacto">Impacto y contacto</button>
+            <button type="button" class="tab" id="tab-esfuerzo" role="tab" aria-selected="false" aria-controls="panel-esfuerzo" tabindex="-1">Sin impacto</button>
+            <button type="button" class="tab" id="tab-transporte" role="tab" aria-selected="false" aria-controls="panel-transporte" tabindex="-1">Transporte</button>
+          </div>
+          <div class="tab-panel" id="panel-impacto" role="tabpanel" aria-labelledby="tab-impacto">
+            <div class="code-visual"><span class="code-range">000–199</span><span class="impact-line" aria-hidden="true"></span><span class="impact-dot" aria-hidden="true"></span></div>
+            <div>
+              <h3>Impactos, caídas y atrapamientos</h3>
+              <p>Incluye golpes contra objetos, golpes por objetos que caen o vuelan, caídas, atrapamientos y fricción. La dirección predominante del movimiento ayuda a distinguir “golpeado contra” de “golpeado por”.</p>
+              <ul class="code-list"><li><b>010</b> Golpeado contra</li><li><b>020</b> Golpeado por</li><li><b>030 / 050</b> Caídas</li><li><b>060</b> Cogido en, debajo o entre</li></ul>
+            </div>
+          </div>
+          <div class="tab-panel" id="panel-esfuerzo" role="tabpanel" aria-labelledby="tab-esfuerzo" hidden>
+            <div class="code-visual warm"><span class="code-range">100–180</span><span class="effort-wave" aria-hidden="true">∿</span></div>
+            <div>
+              <h3>Reacción corporal y exposiciones</h3>
+              <p>Reúne eventos sin impacto: movimiento libre del cuerpo, sobreesfuerzo, contacto eléctrico, temperaturas extremas y sustancias nocivas o radiaciones.</p>
+              <ul class="code-list"><li><b>100</b> Reacción corporal</li><li><b>120</b> Sobreesfuerzo</li><li><b>130</b> Corriente eléctrica</li><li><b>150 / 180</b> Temperaturas o sustancias nocivas</li></ul>
+            </div>
+          </div>
+          <div class="tab-panel" id="panel-transporte" role="tabpanel" aria-labelledby="tab-transporte" hidden>
+            <div class="code-visual blue"><span class="code-range">200–399</span><span class="vehicle" aria-hidden="true">▰</span></div>
+            <div>
+              <h3>Accidentes de transporte</h3>
+              <p>El anexo separa el transporte público de los vehículos motorizados. Para estos últimos, clasifica el primer suceso de la secuencia que afectó al ocupante.</p>
+              <ul class="code-list"><li><b>200</b> Transporte público</li><li><b>300</b> Vehículos motorizados</li><li><b>310 / 320</b> Choques</li><li><b>330</b> Accidentes sin choque</li></ul>
+            </div>
+          </div>
+        </div>
+        <aside class="insight reveal"><span>Distinción clave</span><p>Una caída a nivel inferior ocurre cuando el punto de contacto queda por debajo de la superficie que sostenía a la persona. A un mismo nivel, el contacto queda en esa superficie o sobre ella.</p><small>PDF, p. 25</small></aside>
+      </section>
+
+      <section id="condicion" class="condition section-anchor" aria-labelledby="conditionTitle">
+        <div class="condition-layout">
+          <div class="section-heading light reveal">
+            <p class="eyebrow"><span></span> 3.5 · Anexo A1.5</p>
+            <h2 id="conditionTitle">Condición ambiental peligrosa</h2>
+            <p>Registra el factor físico o la circunstancia que permitió u ocasionó el tipo de accidente. La categoría observa objetos, sustancias o ambiente, no debilidades de una persona.</p>
+            <div class="source-chip">PDF, pp. 6–7 y 30–33</div>
+          </div>
+          <div class="condition-rules reveal">
+            <details open><summary>¿Puede existir junto con un acto inseguro?</summary><p>Sí. Si una condición peligrosa contribuyó al accidente, se registra incluso cuando también hubo un acto inseguro.</p></details>
+            <details><summary>¿Cuándo se registra falta de EPP?</summary><p>Cuando el equipo era esencial para ejecutar la tarea de forma segura y su ausencia contribuyó a la ocurrencia. Si solo habría reducido la gravedad de la lesión, no corresponde esta condición.</p></details>
+            <details><summary>¿Cómo se relaciona con el agente?</summary><p>La condición describe una característica importante del agente del accidente. Por eso, ambas selecciones suelen realizarse de manera simultánea.</p></details>
+          </div>
+        </div>
+        <div class="condition-catalog reveal" aria-label="Ejemplos de grupos de condiciones peligrosas">
+          <article><b>000</b><span>Defectos del agente</span><small>Ej.: rugoso, desgastado o mal construido</small></article>
+          <article><b>100</b><span>Riesgo de ropa o vestuario</span><small>Incluye carencia de EPP necesario</small></article>
+          <article><b>200</b><span>Riesgos ambientales</span><small>Ruido, iluminación o ventilación</small></article>
+          <article><b>300</b><span>Métodos peligrosos</span><small>Procedimientos planeados o aceptados</small></article>
+          <article><b>400–500</b><span>Colocación y protección</span><small>Apilamiento, protección o rotulado</small></article>
+          <article><b>600–700</b><span>Exterior y público</span><small>Riesgos de entorno no controlado</small></article>
+        </div>
+      </section>
+
+      <section id="agente" class="section agent-section section-anchor" aria-labelledby="agentTitle">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span></span> 3.6 y 3.7 · Anexo A1.6</p>
+          <h2 id="agentTitle">Agente y parte del agente: dos niveles de precisión</h2>
+          <p>Estas categorías no preguntan qué objeto lesionó directamente a la persona, sino dónde estaba la condición peligrosa que contribuyó al accidente.</p>
+        </div>
+        <div class="comparison reveal">
+          <article class="comparison-card"><p class="comparison-label">3.6</p><h3>Agente del accidente</h3><p>Objeto, sustancia, elemento o estructura donde existió la condición peligrosa.</p><div class="example"><span>Ejemplo</span><p>Una <b>máquina</b> con un resguardo insuficiente.</p></div></article>
+          <article class="comparison-card accent"><p class="comparison-label">3.7</p><h3>Parte del agente</h3><p>Parte identificable e importante del agente en la que estaba esa condición.</p><div class="example"><span>Ejemplo</span><p>El <b>resguardo</b> o la zona de transmisión de esa máquina.</p></div></article>
+          <article class="comparison-card dark"><p class="comparison-label">No confundir</p><h3>Agente de la lesión</h3><p>Es el objeto, sustancia, exposición o movimiento que infligió directamente la lesión. Puede coincidir o no con el agente del accidente.</p><div class="example"><span>Regla</span><p>La selección depende del papel que cumplió en el caso.</p></div></article>
+        </div>
+        <div class="agent-note reveal"><div aria-hidden="true" class="agent-diagram"><span class="diagram-machine">M</span><i></i><span class="diagram-part">P</span></div><p><b>Regla práctica:</b> cuando una pieza forma parte integral de una máquina, la máquina se registra como agente y la pieza se detalla como parte del agente. Las superficies usadas como apoyo de personas se tratan como agentes principales.</p><small>PDF, pp. 7–8</small></div>
+      </section>
+
+      <section id="acto" class="act-section section-anchor" aria-labelledby="actTitle">
+        <div class="act-intro reveal">
+          <p class="eyebrow"><span></span> 3.8 · Anexo A1.8</p>
+          <h2 id="actTitle">Acto inseguro</h2>
+          <p>Identifica una acción u omisión que vulneró un procedimiento seguro comúnmente aceptado y permitió u ocasionó directamente el tipo de accidente.</p>
+        </div>
+        <div class="act-layout">
+          <div class="act-rule reveal"><span class="quote-mark" aria-hidden="true">?</span><h3>Pregunta de contraste</h3><p>¿Una persona precavida y bien adiestrada habría actuado igual en las mismas circunstancias?</p><small>Una respuesta negativa orienta la identificación del acto inseguro.</small></div>
+          <div class="act-catalog reveal">
+            <button class="act-item" type="button" data-act="La categoría 050 cubre limpieza, lubricación, ajuste o reparación de equipos móviles, eléctricos o de presión. Incluye, por ejemplo, trabajar en equipo energizado."><b>050</b><span>Intervenir equipo en condiciones peligrosas</span><i>+</i></button>
+            <button class="act-item" type="button" data-act="El código 100 registra omitir el equipo de protección personal disponible. Se diferencia de la condición ambiental de carencia de EPP."><b>100</b><span>Omitir EPP disponible</span><i>+</i></button>
+            <button class="act-item" type="button" data-act="El grupo 200 incluye no asegurar, bloquear, advertir o señalizar equipos, vehículos o materiales antes de una acción peligrosa."><b>200</b><span>No asegurar o advertir</span><i>+</i></button>
+            <button class="act-item" type="button" data-act="El grupo 300 corresponde al uso de material o equipo de una manera para la cual no está indicado."><b>300</b><span>Uso impropio de equipo</span><i>+</i></button>
+            <button class="act-item" type="button" data-act="El grupo 450 recoge bloquear, retirar, colocar mal o reemplazar inadecuadamente dispositivos de seguridad."><b>450</b><span>Inutilizar dispositivos de seguridad</span><i>+</i></button>
+            <button class="act-item" type="button" data-act="El grupo 550 incluye exponerse bajo cargas suspendidas, entrar a espacios encerrados sin eliminar contaminantes o viajar en posiciones inseguras."><b>550</b><span>Postura o posición insegura</span><i>+</i></button>
+          </div>
+        </div>
+        <p class="act-detail" id="actDetail" aria-live="polite">Selecciona un grupo para revisar una explicación breve del anexo.</p>
+        <aside class="warning-note reveal"><b>Importante.</b> Las decisiones de supervisión no se registran, en general, como acto inseguro. Los riesgos creados por ellas se tratan como condiciones ambientales peligrosas. Las acciones ordenadas directamente por supervisión tampoco se clasifican como acto inseguro.<small>PDF, p. 9</small></aside>
+      </section>
+
+      <section id="practica" class="practice section-anchor" aria-labelledby="practiceTitle">
+        <div class="section-heading light reveal">
+          <p class="eyebrow"><span></span> Aplicación guiada</p>
+          <h2 id="practiceTitle">Clasifica un caso paso a paso</h2>
+          <p>Escenario didáctico construido para practicar la lógica de selección, no para sustituir una investigación de accidente.</p>
+        </div>
+        <article class="case-study reveal">
+          <div class="case-context"><span>CASO</span><h3>Zona de transmisión sin protección</h3><p>Durante una tarea en una máquina, una persona entra en contacto con una zona móvil sin resguardo y sufre una lesión por atrapamiento.</p><button class="button button-light" type="button" id="revealCase">Ver clasificación razonada</button></div>
+          <ol class="case-steps" id="caseSteps" hidden>
+            <li><b>1</b><div><span>Tipo de accidente</span><p><strong>060 · Cogido en, debajo o entre.</strong> El evento se caracteriza por compresión o atrapamiento entre partes.</p></div></li>
+            <li><b>2</b><div><span>Condición peligrosa</span><p><strong>510 · Sin protección.</strong> La condición recae en la ausencia de resguardo frente a un riesgo mecánico.</p></div></li>
+            <li><b>3</b><div><span>Agente y parte</span><p><strong>Máquina · zona de transmisión.</strong> El agente se registra como el conjunto; la zona que contiene el peligro aporta el detalle.</p></div></li>
+            <li><b>4</b><div><span>Acto inseguro, si existió</span><p><strong>453 · Quitar un dispositivo de seguridad.</strong> Solo corresponde si se comprobó que alguien retiró la guarda antes del hecho.</p></div></li>
+          </ol>
+        </article>
+        <div class="quiz reveal" aria-labelledby="quizTitle">
+          <div><p class="eyebrow"><span></span> Repaso rápido</p><h3 id="quizTitle">¿Qué recuerda del método?</h3><p>Elige la mejor respuesta. Recibirás una explicación vinculada al material fuente.</p></div>
+          <form id="quizForm">
+            <fieldset><legend>Si ninguna condición peligrosa contribuyó al accidente, ¿puede haber agente del accidente?</legend><label><input type="radio" name="q1" value="a" /> Sí, siempre se selecciona un objeto.</label><label><input type="radio" name="q1" value="b" /> No, se registra igualmente como ninguno.</label></fieldset>
+            <fieldset><legend>¿Cuál afirma correctamente la relación entre agente de lesión y agente del accidente?</legend><label><input type="radio" name="q2" value="a" /> Deben ser siempre idénticos.</label><label><input type="radio" name="q2" value="b" /> Pueden coincidir o ser distintos.</label></fieldset>
+            <fieldset><legend>¿Cuándo aplica “carencia de EPP necesario” como condición?</legend><label><input type="radio" name="q3" value="a" /> Cuando el EPP era esencial para evitar la ocurrencia.</label><label><input type="radio" name="q3" value="b" /> Siempre que hubiera reducido la gravedad.</label></fieldset>
+            <button class="button button-primary" type="submit">Comprobar respuestas</button>
+          </form>
+          <p id="quizResult" class="quiz-result" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section id="fuentes" class="sources section-anchor" aria-labelledby="sourceTitle">
+        <div class="sources-image reveal"><button type="button" class="image-button" data-open-modal="priorityModal"><img src="assets/images/base.jpeg" alt="Imagen de referencia con los temas prioritarios del Tema 6" /><span>Ampliar referencia</span></button></div>
+        <div class="sources-copy reveal"><p class="eyebrow"><span></span> Fuentes y trazabilidad</p><h2 id="sourceTitle">Cómo se sustentó esta experiencia</h2><p>La página desarrolla los apartados prioritarios con la presentación suministrada y la interpretación académica del método. Se indican páginas para facilitar la revisión.</p><ul><li><b>Definiciones y reglas 3.4–3.8:</b> PDF, pp. 6–9</li><li><b>Clasificación A1.4:</b> PDF, pp. 25–29</li><li><b>Clasificación A1.5:</b> PDF, pp. 30–33</li><li><b>Clasificación del agente:</b> PDF, pp. 34–41</li><li><b>Clasificación A1.8:</b> PDF, pp. 42–43</li></ul><button class="text-button" type="button" data-open-modal="glossaryModal">Consultar glosario técnico <span>→</span></button></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="brand" href="#inicio"><span class="brand-mark">Z</span><span>ANSI <b>Z16.2</b></span></a><p>Tema 6 · Análisis de las causas</p><a href="#inicio">Volver arriba ↑</a></footer>
+    <button class="back-to-top" type="button" aria-label="Volver al inicio">↑</button>
+
+    <dialog class="modal" id="glossaryModal" aria-labelledby="glossaryTitle"><button class="modal-close" type="button" aria-label="Cerrar">×</button><p class="eyebrow"><span></span> Glosario contextual</p><h2 id="glossaryTitle">Términos para leer el método</h2><dl><div><dt>Agente de la lesión</dt><dd>Objeto, sustancia, exposición o movimiento que inflige directamente la lesión.</dd></div><div><dt>Agente del accidente</dt><dd>Objeto, sustancia, elemento o estructura donde estaba la condición peligrosa.</dd></div><div><dt>Condición ambiental peligrosa</dt><dd>Factor físico o circunstancia que permitió u ocasionó el tipo de accidente.</dd></div><div><dt>Acto inseguro</dt><dd>Acción u omisión que vulnera un procedimiento seguro aceptado y se vincula directamente con el suceso.</dd></div><div><dt>N.C.</dt><dd>“No clasificar”: corresponde a una sumatoria de códigos más específicos y no se codifica como tal.</dd></div></dl></dialog>
+    <dialog class="modal image-modal" id="priorityModal" aria-label="Imagen de referencia de temas prioritarios"><button class="modal-close" type="button" aria-label="Cerrar">×</button><img src="assets/images/base.jpeg" alt="Temas prioritarios: categorías analíticas, tipo de accidente, condición ambiental peligrosa, agente, parte del agente y acto inseguro" /></dialog>
+    <script src="js/script.js"></script>
+  </body>
+</html>
